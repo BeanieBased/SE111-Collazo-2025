@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.bigbox {
+    border: 2px solid blue;
+    padding: 20px;
+}
+h1 {
+    border: 2px solid magenta;
+    padding: 10px;
+    color: red;
+}
+p {
+    border: 2px solid green;
+    padding: 10px;
+}
+.highlight {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
