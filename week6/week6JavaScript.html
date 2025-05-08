@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Week 6 | JavaScript Lab</title>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Week 6 JavaScript Lab</h1>
+        <p></p>
+         <script>
+            //Line comment in JavaScript
+            /*
+            Multiline comment in JavaScript
+            */
+
+            var firstName = "Justyn";
+            var lastName = "Collazo"
+            // String using concatonation
+            var message = firstName + " " + lastName;
+            // String with literal notation
+            var messageLiteral = `${firstName} ${lastName}`;
+            console.log(messageLiteral);
+            // Alert Message to display data quickly. Typically not used in shipped site.
+            alert(message);
+            alert(messageLiteral);
+
+            function outputToPage(tag, msg, color){
+                document.querySelector(tag).innerHTML = msg;
+                document.querySelector(tag).style.color = color;
+            }
+            
+            outputToPage("p", messageLiteral, "#0000ff");
+
+            // Event Handler Example
+            var promptButton = document.querySelector("button");
+            promptButton.addEventListener("click", ()=>{
+                outputToPage("p", "Wouldn't you like to be a pepper too??", "#00ff00")
+            })
+        </script>
+    </body>
+</html>
