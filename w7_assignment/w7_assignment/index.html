@@ -117,7 +117,7 @@
             Number(taxAmount);
             var net = (gross * taxAmount);
             //console.log() all three processed values, rounded to the second decimal place
-            //console.log(.toFixed(2))
+        
 
             console.log(`Gross Pay: $${gross.toFixed(2)}`);
             console.log(`Tax Rate: 20%`);
@@ -125,10 +125,10 @@
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
             
-            var finalMessage = `
-            Full Name: ${full} <br> 
-            Hours Worked: ${hours} <br>
-            Hourly Rate: $${rate}`;
+            var finalMessage = 
+            `Full Name: ${full}<br>` +
+            `Hours Worked: ${Number(hours).toFixed(2)}<br>` +
+            `Hourly Rate: $${Number(rate).toFixed(2)}`;
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
@@ -145,10 +145,10 @@
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
 
-            check.innerHTML = `
-            Gross Pay: $${gross} <br>
-            Tax Amount: 20% <br>
-            Net Pay: $${net.toFixed(2)}`;
+            check.innerHTML = 
+            `Gross Pay: $${Number(gross).toFixed(2)}<br>` +
+            `Tax Amount: 20%<br>` +
+            `Net Pay: $${Number(net).toFixed(2)}`;
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
